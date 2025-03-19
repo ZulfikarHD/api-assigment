@@ -4,7 +4,7 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "test": "jest --detectOpenHandles"
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --no-cache"
     },
     "devDependencies": {
         "@babel/core": "^7.26.10",

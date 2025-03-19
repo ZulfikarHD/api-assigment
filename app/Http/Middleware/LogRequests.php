@@ -48,7 +48,7 @@ class LogRequests
         ];
 
         // Only log request body for non-GET requests that aren't file uploads
-        if (!$request->isMethod('GET') && !$request->hasFile()) {
+        if (!$request->isMethod('GET') && count($request->allFiles()) === 0) {
             $logData['body'] = $request->except(['password', 'password_confirmation']);
         }
 
